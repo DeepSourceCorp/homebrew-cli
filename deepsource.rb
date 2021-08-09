@@ -12,22 +12,22 @@ class Deepsource < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_darwin_x86_64.tar.gz"
-      sha256 "154b63f7e5d1dc4ebc6f2008ec289d0d97c4f12f29b487964be7c29496137127"
+      sha256 "83e7701b93823d392fcc32f881d8210bb9ce01455656ffd2247b8b0750bf15df"
     end
     if Hardware::CPU.arm?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_darwin_arm64.tar.gz"
-      sha256 "c644060867fbe3dd5fe1722d8d7a1bafe6e38000c73d5d46fa0d1ab810d6b9d0"
+      sha256 "aaf68a731a1218c61661b2fd04697610b065f085d039032f7630ee7b98ff61cc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_linux_x86_64.tar.gz"
-      sha256 "2e8d63cdbaed80990922ffbe478cacca9692efb94a7678e37847a9a16820e448"
+      sha256 "5ba35992bf12921a37854a8842de087aabda9bf644c2f5b8945b54b39db6f1bc"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_linux_arm64.tar.gz"
-      sha256 "f880260de68038b24f19bfe8a8491452d5eef1ec8c9af504f09deb01013bc211"
+      sha256 "87648e65bd8baf16891d2d8301159c12d89e271821199c1be5e6caafbc4cfcac"
     end
   end
 
