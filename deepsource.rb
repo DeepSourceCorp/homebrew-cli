@@ -6,28 +6,28 @@ class Deepsource < Formula
   desc "Command line interface to DeepSource"
   homepage "https://github.com/deepsourcelabs/cli"
   version "0.2.3"
-  license "BSD 2-Clause "Simplified" License"
+  license "BSD 2-Clause Simplified License"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_darwin_x86_64.tar.gz"
-      sha256 "930108d591ccbd8a810d43a13f864553d3bb762c02f33276fa5d0b9a784d9f5c"
+      sha256 "154b63f7e5d1dc4ebc6f2008ec289d0d97c4f12f29b487964be7c29496137127"
     end
     if Hardware::CPU.arm?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_darwin_arm64.tar.gz"
-      sha256 "451a6a1565902e8abc0a0f037db9e2e6b85cf400275422f3f48ce7cd3bb5320e"
+      sha256 "c644060867fbe3dd5fe1722d8d7a1bafe6e38000c73d5d46fa0d1ab810d6b9d0"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_linux_x86_64.tar.gz"
-      sha256 "02d8e2edd1638ca01ce7b6f5a157caea18631552ba2b4b44d638843ceb4dc549"
+      sha256 "2e8d63cdbaed80990922ffbe478cacca9692efb94a7678e37847a9a16820e448"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_linux_arm64.tar.gz"
-      sha256 "f50979889a8992a594980f5d67a1e106e80c855dd2e776aca8f1a89ba4d8ddcd"
+      sha256 "f880260de68038b24f19bfe8a8491452d5eef1ec8c9af504f09deb01013bc211"
     end
   end
 
