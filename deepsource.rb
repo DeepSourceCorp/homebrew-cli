@@ -5,29 +5,29 @@
 class Deepsource < Formula
   desc "Command line interface to DeepSource"
   homepage "https://github.com/deepsourcelabs/cli"
-  version "0.2.3"
+  version "0.2.4"
   license "BSD 2-Clause Simplified License"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_darwin_x86_64.tar.gz"
-      sha256 "83e7701b93823d392fcc32f881d8210bb9ce01455656ffd2247b8b0750bf15df"
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.4/deepsource_0.2.4_darwin_x86_64.tar.gz"
+      sha256 "557bd761fa3b11deb7037007d998216dd6d517ee3762624ea3b0f24ae3240041"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_darwin_arm64.tar.gz"
-      sha256 "aaf68a731a1218c61661b2fd04697610b065f085d039032f7630ee7b98ff61cc"
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.4/deepsource_0.2.4_darwin_arm64.tar.gz"
+      sha256 "daf871a1360aa6fb7f113cc76b745932f1a43aa391446d924b7d6196cfcf7a40"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_linux_x86_64.tar.gz"
-      sha256 "5ba35992bf12921a37854a8842de087aabda9bf644c2f5b8945b54b39db6f1bc"
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.4/deepsource_0.2.4_linux_x86_64.tar.gz"
+      sha256 "f1523f69f5a959a6355713915d3cddf481f0b6f966b82142a3b55c71febd5ec9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.3/deepsource_0.2.3_linux_arm64.tar.gz"
-      sha256 "87648e65bd8baf16891d2d8301159c12d89e271821199c1be5e6caafbc4cfcac"
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.2.4/deepsource_0.2.4_linux_arm64.tar.gz"
+      sha256 "c4c099b4e7257a2ba08ba3facf99a5d00d22d878f3de26886fb9f6aef875ccb4"
     end
   end
 
