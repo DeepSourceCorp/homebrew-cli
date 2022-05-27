@@ -5,21 +5,21 @@
 class Deepsource < Formula
   desc "Command line interface to DeepSource"
   homepage "https://github.com/deepsourcelabs/cli"
-  version "0.3.6"
+  version "0.4.1"
   license "BSD 2-Clause Simplified License"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.3.6/deepsource_0.3.6_darwin_x86_64.tar.gz"
-      sha256 "4d05d21d19f5ac61b71dd80765b1756c20dd0e94a3dbeb046db8d15945ef1b58"
+    if Hardware::CPU.arm?
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.1/deepsource_0.4.1_darwin_arm64.tar.gz"
+      sha256 "993155d26c1778ae980211d92dc4c1b4a6960ff0ab6bde11da5a0c461a88d73d"
 
       def install
         bin.install "deepsource"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.3.6/deepsource_0.3.6_darwin_arm64.tar.gz"
-      sha256 "cae5941fc3daaff21883353f05800acffc1e9ddb4431ac518f688ae13c13f8dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.1/deepsource_0.4.1_darwin_x86_64.tar.gz"
+      sha256 "d9dfb240f2db6e696078d58d6959de921a77a97f57b533c2e0620a1050667c37"
 
       def install
         bin.install "deepsource"
@@ -29,16 +29,16 @@ class Deepsource < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.3.6/deepsource_0.3.6_linux_arm64.tar.gz"
-      sha256 "b16b6e8c6a665e568c547d27196d7883f273e0b1083df915a84c228835abd2b8"
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.1/deepsource_0.4.1_linux_arm64.tar.gz"
+      sha256 "0852a4abc9965283c7151df42c54bed0e0e615889c11e24c801989e8f31af56a"
 
       def install
         bin.install "deepsource"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.3.6/deepsource_0.3.6_linux_x86_64.tar.gz"
-      sha256 "72d1993e06d17d20bf12822040e9ed4e6b57c11a0ad46f34fc146a14edfce114"
+      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.1/deepsource_0.4.1_linux_x86_64.tar.gz"
+      sha256 "2d9e15049484541979274836aa1862c3e9a81c3c2b7525766c6679f741a70a68"
 
       def install
         bin.install "deepsource"
