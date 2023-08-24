@@ -5,43 +5,55 @@
 class Deepsource < Formula
   desc "Command line interface to DeepSource"
   homepage "https://github.com/deepsourcelabs/cli"
-  version "0.4.2"
+  version "0.7.0"
   license "BSD 2-Clause Simplified License"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.2/deepsource_0.4.2_darwin_x86_64.tar.gz"
-      sha256 "3df25ab7d4a848ab1f2ecbfd9d5e4f0403d60d7f7ca8b59aaf7145ee6cee9b0b"
+    if Hardware::CPU.arm?
+      url "https://github.com/DeepSourceCorp/cli/releases/download/v0.7.0/deepsource_0.7.0_darwin_arm64.tar.gz"
+      sha256 "a2e034089bbe463d947ceb05117536fd32cbb7c3032c53d59649a344b00dccd0"
 
       def install
         bin.install "deepsource"
+        bash_completion.install "completions/deepsource.bash" => "deepsource"
+        zsh_completion.install "completions/deepsource.zsh" => "_deepsource"
+        fish_completion.install "completions/deepsource.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.2/deepsource_0.4.2_darwin_arm64.tar.gz"
-      sha256 "de85f0d18b1ab55d35a603e11202ef465e0452ef94fab7dad98e678f2ea529bd"
+    if Hardware::CPU.intel?
+      url "https://github.com/DeepSourceCorp/cli/releases/download/v0.7.0/deepsource_0.7.0_darwin_x86_64.tar.gz"
+      sha256 "9bcff63bc86b8a737cb4eb78b8ce6f11a609800ea73ece8e48528d75d52a1d11"
 
       def install
         bin.install "deepsource"
+        bash_completion.install "completions/deepsource.bash" => "deepsource"
+        zsh_completion.install "completions/deepsource.zsh" => "_deepsource"
+        fish_completion.install "completions/deepsource.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.2/deepsource_0.4.2_linux_arm64.tar.gz"
-      sha256 "5840eac53b36da59f83edfd936b795e970b0c184d21fc2fa21f2612ed7484021"
+      url "https://github.com/DeepSourceCorp/cli/releases/download/v0.7.0/deepsource_0.7.0_linux_arm64.tar.gz"
+      sha256 "e77356ab441fe681f1be270cd92a6f283271df0012146c5924110a328b5d1799"
 
       def install
         bin.install "deepsource"
+        bash_completion.install "completions/deepsource.bash" => "deepsource"
+        zsh_completion.install "completions/deepsource.zsh" => "_deepsource"
+        fish_completion.install "completions/deepsource.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/deepsourcelabs/cli/releases/download/v0.4.2/deepsource_0.4.2_linux_x86_64.tar.gz"
-      sha256 "0b008f39c7a111fa44630981c2f80957a10ccc8034ff276698b83d8f740b0cea"
+      url "https://github.com/DeepSourceCorp/cli/releases/download/v0.7.0/deepsource_0.7.0_linux_x86_64.tar.gz"
+      sha256 "d864a77b1eab886164203c96d9bd23d284a2403e0f33eec30a478d540abca216"
 
       def install
         bin.install "deepsource"
+        bash_completion.install "completions/deepsource.bash" => "deepsource"
+        zsh_completion.install "completions/deepsource.zsh" => "_deepsource"
+        fish_completion.install "completions/deepsource.fish"
       end
     end
   end
