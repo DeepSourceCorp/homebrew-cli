@@ -5,12 +5,12 @@
 class Deepsource < Formula
   desc "Command line interface to DeepSource"
   homepage "https://github.com/deepsourcelabs/cli"
-  version "0.8.5"
+  version "0.8.6"
   license "BSD 2-Clause Simplified License"
 
   on_macos do
-    url "https://github.com/DeepSourceCorp/cli/releases/download/v0.8.5/deepsource_0.8.5_darwin_x86_64.tar.gz"
-    sha256 "0608f80dcef6f02977d1d667d3910184ed1680e53d4c78bc6f6a90fcaf54eb48"
+    url "https://github.com/DeepSourceCorp/cli/releases/download/v0.8.6/deepsource_0.8.6_darwin_x86_64.tar.gz"
+    sha256 "0970061b4755ecce8736f1d9bc8932cdafb452528432267ce33a0d566a3ecdeb"
 
     def install
       bin.install "deepsource"
@@ -32,8 +32,8 @@ class Deepsource < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/DeepSourceCorp/cli/releases/download/v0.8.5/deepsource_0.8.5_linux_x86_64.tar.gz"
-      sha256 "75ce608e70282165d8058c8e59f07a83ce803f43091565b01041151034d09fd3"
+      url "https://github.com/DeepSourceCorp/cli/releases/download/v0.8.6/deepsource_0.8.6_linux_x86_64.tar.gz"
+      sha256 "40490fa8403496d354ac5e69ba4a71c287bee579d4413b62ee54c5c3038792ca"
 
       def install
         bin.install "deepsource"
